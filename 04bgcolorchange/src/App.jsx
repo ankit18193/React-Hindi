@@ -32,7 +32,12 @@ function App() {
 
   return (
     <>
-    <h1 className={`text-${Textcolor}`}>Bg-color change</h1>
+    <h1 className={`mt-5 text-3xl font-bold ${Textcolor === "white" ? "text-white" : "text-black"}`}>
+  Bg-color change
+</h1>
+
+    
+    
     <div className="mt-5">
         <button id="red" onClick={ColorChange} className="bg-red-500 text-white px-4 py-2 m-2 rounded">Red</button>
         <button id="yellow" onClick={ColorChange} className="bg-yellow-500 text-white px-4 py-2 m-2 rounded">Yellow</button>
