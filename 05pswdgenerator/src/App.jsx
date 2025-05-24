@@ -14,8 +14,8 @@ function App() {
     if (numAllowed) str += "0123456789";
     if (charAllowed) str += "~!@#$%^&*()[]{}=+-_";
 
-    for (let i = 0; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
+    for (let i = 0; i < length; i++) {
+      let char = Math.floor(Math.random() * str.length );
 
       pass += str.charAt(char);
     }
@@ -62,7 +62,7 @@ function App() {
               max={100}
               className="cursor-pointer"
               onChange={(e) => {
-                setLength(e.target.value);
+                setLength(Number(e.target.value));
               }}
             />
             <label>length:{length}</label>
